@@ -3,13 +3,13 @@ import React from 'react'
 export const About = () => {
   // <!-- start how we do section -->
   return(
-  <div>
-    <section className="goals title-howeare" id="aboutUs">
+  <div  className="gray-bg">
+    <section className="goals title-howeare " id="aboutUs">
       <h2 className="section-title mb-2 h1">Qui somme Nous?</h2>
       <p className="text-center text-muted btmpdg  h5">S'il vous plaît laissez-nous savoir si vous souhaitez en savoir plus sur nous</p>
     </section>
     <div>
-      <section id="how-we-do" className="p-0">
+      <section id="how-we-do" className="p-0 m-0 gray-bg">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-6 how-bg-img" id="imghoweare"></div>

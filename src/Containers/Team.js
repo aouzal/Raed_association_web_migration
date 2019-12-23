@@ -18,10 +18,8 @@ import { getTeam } from '../../Actions/UserActions'
 
 render(){
   const list=this.props.Team&&this.props.Team.map((element,key)=>{
-
-    console.log(element.firstName)
   return(
-    <div className="col-xs-12 col-sm-6 col-md-3" id={"member"+element.id}>
+    <div className="col-xs-12 col-sm-6 col-md-3" id={"member"+element.id} key={key}>
     <div className="single-team">
         <div className="team-photo">
             <img src={"Locale/Theme/img/Team/"+(element.firstName+element.lastName).replace(/\s/g, '').toLowerCase()+".png"} alt=""/>
@@ -40,7 +38,7 @@ render(){
    );
 
 return(
-  <section className="section-padding gray-bg teamimg" id="team-page" tabIndex="-1">
+  <section className=".section-padding-members gray-bg teamimg" id="team-page" tabIndex="-1">
         <div className="container">
           <div className="title-howeare">
             <h2 className="section-title mb-2 h1">Notre Membres</h2>

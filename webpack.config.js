@@ -4,18 +4,23 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 module.exports = {
-    entry: ["babel-polyfill",'./index.js'],
+    entry: ["babel-polyfill", './index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
         chunkFilename: 'main.js',
-        // publicPath: 'https://raed-react-app.firebaseapp.com/dist/'
+         publicPath: '/'
     },
     module: {
         rules: [
-            { test: /\.(js)$/, use: 'babel-loader' },
             {
-                test: /\.(sa|sc|c)ss$/,
+                test: /\.(js)$/,
+                use: 'babel-loader',
+                
+
+            },
+            {
+                test: /\.css$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader
@@ -25,6 +30,12 @@ module.exports = {
                     },
 
                 ]
+            },
+
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader'],
             },
             { test: /\.json$/, loader: 'json-loader' },
             {
@@ -51,6 +62,9 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        historyApiFallback: true,
+      },
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
@@ -92,8 +106,9 @@ module.exports = {
 
 
 
+        }),
+        
 
-        })
     ]
 }
 

@@ -3,12 +3,15 @@ import firebase from '../firebase-config'
 
 
 
+
 const databaseRef1 = firebase.database().ref();
-const databaseRef2 = firebase.database().ref();
+
 // this is to get the Goals table from firebase
 const GoalsRef = databaseRef1.child("goals");
-const TeamRef = databaseRef2.child("team");
-console.log (GoalsRef)
+const TeamRef = databaseRef1.child("team");
+const PostsRef = databaseRef1.child("posts");
+const MessageRef = databaseRef1.child("messages");
+
 
 
 
@@ -29,4 +32,23 @@ export const getAllGoals=()=> async dispatch=>{
         })
     });
 };
+
+
+export const getPosts=()=>async dispatch=>{
+    PostsRef.once("value", snapshot => {
+        dispatch({
+        type:TYPE.LOAD_POSTS,
+        payload: snapshot.val() || {}
+        })
+    });
+}
+
+export const sendMessage=(message)=>async dispatch=>{
+   
+    alert(JSON.stringify(message));
+   
+     MessageRef.set(message);
+
+     console.log("Message Sent !");
+}
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {getAllGoals} from '../../Actions/UserActions'
 
 
+
 class Goals extends React.Component {
 
   constructor(props) {
@@ -13,15 +14,20 @@ class Goals extends React.Component {
   }
 
   componentDidMount() {
+    
   this.props.getAllGoals();
+
+ 
   }
+
+ 
   render() {
 
     // const list= this.props.UserReducer&&this.props.UserReducer.Goals&&this.props.UserReducer.Goals.map((element,key)=>{
       const list= this.props.Goals&&this.props.Goals.map((element,key)=>{
      return(
-      <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" id={"goal"+element.id} key={key}>
-      <div className="card">
+      <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" id={"goal"+element.id} ref={"goal"+element.id} key={key}>
+      <div className="card" ref="card">
         <div className={"card-block block-"+element.id}>
           <h3 className="card-title">{element.title}</h3>
           <p className="card-text">{element.description}</p>

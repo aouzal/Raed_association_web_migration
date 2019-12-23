@@ -40,8 +40,8 @@ export const Footer=()=>{
           <ul className="list-unstyled list-inline social text-center">
             <li className="list-inline-item"><a href="https://www.facebook.com/جمعية-رائد-Association-Raed-1639918316090890/" target="_blank"><i className="fa fa-facebook"></i></a></li>
             <li className="list-inline-item"><a href="https://www.instagram.com/associationraed/" target="_blank"><i className="fa fa-instagram"></i></a></li>
-            <li className="list-inline-item"><a href="0627-050623" target="_blank"><i className="fa fa-phone"></i></a></li>
-            <li className="list-inline-item"><a href="asso.raed@gmail.com" target="_blank"><i className="fa fa-envelope"></i></a></li>
+            <li className="list-inline-item"><a href="javascript:void();" onClick={()=>{alert("0627050623")}}><i className="fa fa-phone"></i></a></li>
+            <li className="list-inline-item"><a href="javascript:void();" onClick={()=>{alert("zakariaaouzal@gmail.com")}}><i className="fa fa-envelope"></i></a></li>
           </ul>
         </div>
         <hr/>

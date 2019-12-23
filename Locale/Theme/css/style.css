@@ -206,6 +206,9 @@ nav .mynav-item{
 .section-padding {
        padding: 120px 0;
   }
+  .section-padding-partners .section-padding-members {
+    padding-top:20px;
+}
 .single-team h6 {
     margin-bottom: 20px;
 }
@@ -402,8 +405,8 @@ textarea::-webkit-input-placeholder {
 .input-group-addon i {
     color: #63480f;
 }
-.btmpdg{
-  padding-bottom: 50px;
+.btmpdg-partners{
+  padding-bottom: 20px;
 }
 .btn-select {
     font-size: 14px;
@@ -494,7 +497,7 @@ select option {
     border-bottom-right-radius: 0px;
 }
 .service-form {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     border: 1px solid #e4e8ea;
     padding: 40px 40px 20px 40px;
 }

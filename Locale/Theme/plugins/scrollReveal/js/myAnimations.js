@@ -12,10 +12,17 @@ sr.reveal('#imghoweare', {duration:800,origin:'left', delay:200});
 sr.reveal('#how-content', {duration:800,origin:'right'});
 //teammembers
 sr.reveal('#member-sec', {duration:800});
-sr.reveal('#member1', {duration:800,origin:'left', delay:200});
-sr.reveal('#member2', {duration:800,origin:'top', delay:400});
-sr.reveal('#member3', {duration:800,origin:'bottom', delay:600});
-sr.reveal('#member4', {duration:800,origin:'right', delay:800});
+sr.reveal('#member0', {duration:800,origin:'left', delay:200});
+sr.reveal('#member1', {duration:800,origin:'top', delay:400});
+sr.reveal('#member2', {duration:800,origin:'bottom', delay:600});
+sr.reveal('#member3', {duration:800,origin:'right', delay:800});
+
+sr.reveal('#member4', {duration:800,origin:'left', delay:1000});
+sr.reveal('#member5', {duration:800,origin:'top', delay:1200});
+sr.reveal('#member6', {duration:800,origin:'bottom', delay:1400});
+sr.reveal('#member7', {duration:800,origin:'right', delay:1600});
+
+sr.reveal('#member8', {duration:800,origin:'left', delay:1800});
 //objectifs
 sr.reveal('#goal1', {duration:800,origin:'left', delay:100});
 sr.reveal('#goal2', {duration:800,origin:'top', delay:200});

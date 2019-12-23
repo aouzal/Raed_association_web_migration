@@ -1,10 +1,35 @@
 import React from 'react'
+import { Field, reduxForm } from 'redux-form'
+import FormDonate from './FormDonate'
+import {connect} from 'react-redux'
+ import {sendMessage} from '../../Actions/UserActions'
 
 
-export const Donate = () => {
+
+
+
+
+class  Donate extends React.Component {
+
+
+    constructor(props){
+        super(props);
+        this.state={
+            
+        };
+    };
+
+ 
+
+    render(){
+
+
+const {sendMessage}=this.props;
+
+        
     // <!-- donate section 1 -->
     return(
-    <section className="title-howeare" id="fmDnt">
+    <section className="title-howeare gray-bg" id="fmDnt">
         <h2 className="section-title mb-2 h1 animateme">Contribuer</h2>
         <p className="text-center text-muted h5">Donnez même un peu pour une société consciente</p>
 
@@ -54,64 +79,8 @@ export const Donate = () => {
                                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb10 ">
                                         <h3>Entrez vos informations ici (ne seront pas utilisées dans le commercial)</h3>
                                     </div>
-                                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
-                                        <div className="form-group service-form-group">
-                                            <label className="control-label sr-only" htmlFor="name"></label>
-                                            <input id="name" type="text" placeholder="Prénom" className="form-control" required />
-                                            <div className="form-icon"><i className="fa fa-user"></i></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  ">
-                                        <div className="form-group service-form-group">
-                                            <label className="control-label sr-only" htmlFor="name"></label>
-                                            <input id="name" type="text" placeholder="Nom" className="form-control" required />
-                                            <div className="form-icon"><i className="fa fa-user"></i></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <div className="form-group service-form-group">
-                                            <label className="control-label sr-only" htmlFor="email"></label>
-                                            <input id="email" type="email" placeholder="Email" className="form-control" required />
-                                            <div className="form-icon"><i className="fa fa-envelope"></i></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <div className="form-group service-form-group">
-                                            <label className="control-label sr-only" htmlFor="phone"></label>
-                                            <input id="phone" type="text" placeholder="Téléphone" className="form-control" required />
-                                            <div className="form-icon"><i className="fa fa-phone"></i></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <div className="form-group service-form-group">
-                                            <label className="control-label sr-only" htmlFor="website"></label>
-                                            <input id="website" type="text" placeholder="Siteweb URL" className="form-control" required />
-                                            <div className="form-icon"><i className="fa fa-link"></i></div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <div className="form-group">
-                                            <label className="control-label sr-only" htmlFor="select"></label>
-                                            <div className="select">
-                                                <select id="select" name="select" className="form-control">
-                                                    <option value="">Budget</option>
-                                                    <option value="">1000 MAD</option>
-                                                    <option value="">5000 MAD</option>
-                                                    <option value="">10000 MAD</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <div className="form-group">
-                                            <label className="control-label sr-only" htmlFor="textarea"></label>
-                                            <textarea className="form-control" id="textarea" name="textarea" rows="3" placeholder="Messages"></textarea>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <button type="submit" name="singlebutton" className="btn btn-default btn-block mb10">envoyer le message</button>
-                                        <p><small>Nous promettons que nous ne pourrons JAMAIS vous SPAMER avec des emails indésirables.</small></p>
-                                    </div>
+<FormDonate onSubmit={sendMessage}/>
+                                   
                                 </div>
                             </div>
                         </form>
@@ -124,5 +93,20 @@ export const Donate = () => {
     </section>
     // {/* <!-- /donate section 1 --> */ }
 );
+}
     
 }
+
+
+const mapStateToProps=state=>({
+...state
+});
+
+const mapDispatcheToProps=dispatch=>({
+    sendMessage:(message)=>dispatch(
+        sendMessage(message)
+    )
+})
+
+
+export default connect(mapStateToProps,mapDispatcheToProps)(Donate)
