@@ -20,7 +20,7 @@ export const Navbar=()=>{
       <li className="nav-item"><a className="nav-link" href="#what-we-do">OBJECTIFS</a> </li> 
       <li className="nav-item"><a className="nav-link" href="#team-page">NOTRE MEMBRES</a> </li> 
       <li className="nav-item"><a className="nav-link" href="#fmDnt">CONTRIBUER</a> </li> 
-      <li className="nav-item"><a className="nav-link" href="#">CALENDRIE</a> </li> 
+      <li className="nav-item"><a className="nav-link" href="/Gallery">GALLERY</a> </li> 
 
     </ul>
     

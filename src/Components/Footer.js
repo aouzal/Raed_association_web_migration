@@ -30,8 +30,8 @@ export const Footer = () => {
             <div className="col-xs-12 col-sm-4 col-md-4">
               <h5>NOTRE GALLERIE</h5>
               <ul className="list-unstyled quick-links">
-                <li><a href="javascript:void();"><i className="fa fa-angle-double-right"></i>Images</a></li>
-                <li><a href="javascript:void();"><i className="fa fa-angle-double-right"></i>Videos</a></li>
+                <li><a href="/Gallery"><i className="fa fa-angle-double-right"></i>Images</a></li>
+                <li><a href="/videos"><i className="fa fa-angle-double-right"></i>Videos</a></li>
               </ul>
             </div>
           </div>

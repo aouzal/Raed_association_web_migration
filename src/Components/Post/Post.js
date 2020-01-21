@@ -3,7 +3,7 @@ import { Navbar_post } from './Navbar_post'
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { withRouter } from 'react-router-dom'
-import { getPostsByid } from '../../Actions/UserActions'
+import { getPostsByid } from '../../../Actions/UserActions'
 import dateFormat from 'dateformat';
 import {Footer} from './Footer_post'
 
