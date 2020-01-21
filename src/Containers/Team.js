@@ -22,7 +22,7 @@ render(){
     <div className="col-xs-12 col-sm-6 col-md-3" id={"member"+element.id} key={key}>
     <div className="single-team">
         <div className="team-photo">
-            <img src={"Locale/Theme/img/Team/"+(element.firstName+element.lastName).replace(/\s/g, '').toLowerCase()+".png"} alt=""/>
+            <img src={element.urlImage} alt={element.role}/>
         </div>
         <h5>{element.firstName.toUpperCase()+" "+element.lastName.toUpperCase()}</h5>
         <h6>{element.role.toUpperCase()}</h6>
