@@ -1,8 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
-
 module.exports = {
     entry: ["babel-polyfill", './index.js'],
     output: {
@@ -72,43 +70,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "main.css"
-        }),
-        new HtmlWebpackExternalsPlugin({
-            externals: [
-                {
-                    module: 'jquery',
-                    entry: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-                    global: 'jQuery',
-                    attributes: {
-                        integrity: 'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
-                        crossorigin: 'anonymous',
-                    },
-                },
-                {
-                    module: 'bootstrap',
-                    entry: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css',
-                    attributes: {
-                        integrity: 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO',
-                        crossorigin: 'anonymous',
-                    },
-                },
-                {
-                    module: 'font-awesome',
-                    entry: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-                    attributes: {
-                        integrity: 'sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=',
-                        crossorigin: 'anonymous',
-                    },
-                }
-
-
-            ]
-
-
-
-        }),
-        
-
+        }),        
     ]
 }
 
@@ -123,7 +85,7 @@ module.exports = {
 
 // var path = require('path');
 // var HtmlWebpackPlugin = require('html-webpack-plugin');
-// // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//  const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // module.exports = {
 //     entry: {
@@ -133,7 +95,7 @@ module.exports = {
 //         path: path.resolve(__dirname, 'dist'),
 //         filename: 'main.js',
 //         // chunkFilename: 'main.js',
-//         // publicPath: 'https://raed-react-app.firebaseapp.com/dist/'
+//          publicPath: '/'
 //     },
 //     module: {
 //         rules: [
@@ -141,9 +103,9 @@ module.exports = {
 //             {
 //                 test: /\.(sa|sc|c)ss$/,
 //                 use: [
-//                     // {
-//                     //     loader: MiniCssExtractPlugin.loader
-//                     // },
+//                     {
+//                         loader: MiniCssExtractPlugin.loader
+//                     },
 //                     {
 //                         loader: "css-loader",
 //                     },
@@ -190,9 +152,9 @@ module.exports = {
 //         new HtmlWebpackPlugin({
 //             template: './index.html'
 //         }),
-//         // new MiniCssExtractPlugin({
-//         //     filename: "main.css"
-//         // })
+//         new MiniCssExtractPlugin({
+//             filename: "main.css"
+//         })
 //     ]
 
 // }

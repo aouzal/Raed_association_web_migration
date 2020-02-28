@@ -63,7 +63,7 @@ class Post extends React.Component {
                           <cite title="Source Title">{this.props.Post && this.props.Post.author}</cite>
                         </footer>
                         <footer className="blockquote-footer">
-                          <cite title="Source Title">{this.props.Post ? dateFormat(new Date(this.props.Post.updatedAt), "dddd, mmmm dS, yyyy, h:MM:ss TT"):" "}</cite>
+                          {/* <cite title="Source Title">{this.props.Post ? dateFormat(new Date(this.props.Post.updatedAt), "dddd, mmmm dS, yyyy, h:MM:ss TT"):" "}</cite> */}
                         </footer>
                       </blockquote>
                     </div>

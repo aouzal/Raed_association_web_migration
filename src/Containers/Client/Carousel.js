@@ -1,14 +1,11 @@
 
-
-
-
 import React from 'react';
 import Slider from 'react-animated-slider';
 import { connect } from 'react-redux'
-import  '../../Locale/Theme/Css/slide.css';
-import  '../../Locale/Theme/Css/slide2.css';
+import  '../../../Locale/Theme/Css/slide.css';
+import  '../../../Locale/Theme/Css/slide2.css';
 import "react-animated-slider/build/horizontal.css"
-import { getPosts } from '../../Actions/UserActions'
+import { getPosts } from '../../../Actions/UserActions'
 import {withRouter} from 'react-router-dom'
 
 ///export const history = createHashHistory()

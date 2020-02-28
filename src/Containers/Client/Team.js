@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import compose from "redux";
 import { connect } from "react-redux";
-import { getTeam } from '../../Actions/UserActions'
+import { getTeam } from '../../../Actions/UserActions'
 
  class Teams extends React.Component{
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import FormDonate from './FormDonate'
 import {connect} from 'react-redux'
- import {sendMessage} from '../../Actions/UserActions'
+ import {sendMessage} from '../../../Actions/UserActions'
 
 
 
